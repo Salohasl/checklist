@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #0A1F38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #B1C909;
+  padding:0 24px;
+  height: 56px;
+  border-radius: 32px;
+  font-size: 20px;
+  color: #FFFFFF;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #97AB0D;
+  }
+
+  &:active {
+    background: #819400;
+  }
+}
