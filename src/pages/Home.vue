@@ -1,10 +1,19 @@
 <script setup>
-
 import Header from "../components/Header.vue";
+import Authorization from "../components/form-components/Authorization.vue";
+import {ref} from "vue";
+
+const hiddenForm = ref(false);
+
+function toggleForm() {
+  hiddenForm.value = !hiddenForm.value;
+}
 </script>
 
 <template>
-  <Header />
+  <Header
+    :toggleForm="toggleForm"
+  />
   <section>
     <div class="intro">
       <div class="intro-title">
@@ -16,6 +25,9 @@ import Header from "../components/Header.vue";
       </picture>
     </div>
   </section>
+  <Authorization
+      v-show="hiddenForm"
+  />
 </template>
 
 <style scoped>
